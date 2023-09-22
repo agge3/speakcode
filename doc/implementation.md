@@ -31,3 +31,11 @@ Limitations & Assumptions:
     solution:
         seperate modes or user profiles?
 
+NEW IDEA: Completely spoken IDE. Speak commands and translate them into text -> send back to system
+
+Prototype:
+   Assumptions:
+      correct src directory
+      simple 1 directory (to limit scope)
+      empty directory
+
