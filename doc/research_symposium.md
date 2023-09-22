@@ -10,7 +10,7 @@ An increased fluency in C/C++, incorporation of external APIs, and understanding
 # 5. What value does this project contribute to society?
 Contribution to society should be a driving motivator in all intent of an increasingly interwoven society. This project aims to explore the implementation of that end-game goal of computer linguistics, exploring emerging technologies (AI speech to text & speech interpretation), and contribute a valuable capstone of those ideals. To explore vision in computer science and actualize on a world of technology accessible, in all it's power, to everyone. Enabling speech to programing, without interaction with a computer, is broadening a horizon of accessibility for all that is deep-rooted in the evolution of the miraculous revolution of computing.
 ## Pseduocode
-<code>branch: do we want to gather input data or not?
+branch: do we want to gather input data or not?
     n? go back into a polling state, waiting for input
       implement polling/idle state
     y? look for flag, flag is confirmed, move onto input handling
@@ -38,4 +38,4 @@ code:
   bool write_is_successful()
   void write_code()
     handle writing/saving/etc.
-go back to polling/idle state</code>
+go back to polling/idle state
