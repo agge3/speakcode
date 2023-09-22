@@ -11,35 +11,35 @@ An increased fluency in C/C++, incorporation of external APIs, and understanding
 Contribution to society should be a driving motivator in all intent of an increasingly interwoven society. This project aims to explore the implementation of that end-game goal of computer linguistics, exploring emerging technologies (AI speech to text & speech interpretation), and contribute a valuable capstone of those ideals. To explore vision in computer science and actualize on a world of technology accessible, in all it's power, to everyone. Enabling speech to programing, without interaction with a computer, is broadening a horizon of accessibility for all that is deep-rooted in the evolution of the miraculous revolution of computing.
 ## Pseduocode
 <code>branch: do we want to gather input data or not?
-    &nbsp;n? go back into a polling state, waiting for input
-        &nbsp;&nbsp;implement polling/idle state
-    &nbsp;y? look for flag, flag is confirmed, move onto input handling</code>
+    n? go back into a polling state, waiting for input
+        implement polling/idle state
+    y? look for flag, flag is confirmed, move onto input handling</code>
     
 <code>input handling: syscall to grab microphone data
-  &nbsp;store microphone data in tmp, assign unique_ptr (to avoid copying)
-  &nbsp;send microphone data to external API
-  &nbsp;recieve transcription, store and be able to find
-  &nbsp;unique_ptr to locate transcription/use without copying
-  &nbsp;recieved in JSON? parse JSON to string</code>
+  store microphone data in tmp, assign unique_ptr (to avoid copying)
+  send microphone data to external API
+  recieve transcription, store and be able to find
+  unique_ptr to locate transcription/use without copying
+  recieved in JSON? parse JSON to string</code>
   
 <code>branch: what is the string? is it a command we know?
-  &nbsp;n? error-handling, go back to idle state, request again, etc.
-  &nbsp;y? ...
-    &nbsp;&nbsp;branch: is it a shell command or not?
-      &nbsp;&nbsp;&nbsp;shell? jump to shell handling
-      &nbsp;&nbsp;&nbsp;else? jump to code handling</code>
+  n? error-handling, go back to idle state, request again, etc.
+  y? ...
+    branch: is it a shell command or not?
+      shell? jump to shell handling
+      else? jump to code handling</code>
       
 <code>shell handling: *assumption:* we already know it's a valid shell command (checked already to be in this branch)
-  &nbsp;send to sys to exec command
-    &nbsp;&nbsp;branch: did sys confirm or reject command? bool is_confirmed()
-      &nbsp;&nbsp;&nbsp;confirm? move on, go back to polling/idle state
-      &nbsp;&nbsp;&nbsp;reject? error handling, go back to polling/idle state</code>
+  send to sys to exec command
+    branch: did sys confirm or reject command? bool is_confirmed()
+      confirm? move on, go back to polling/idle state
+      reject? error handling, go back to polling/idle state</code>
       
 <code>code:
-  &nbsp;bool file_is_open()
-  &nbsp;bool file_is_writable()
-    &nbsp;&nbsp;handle how to write, focus on vi
-  &nbsp;bool write_is_successful()
-  &nbsp;void write_code()
-    &nbsp;&nbsp;handle writing/saving/etc.
+  bool file_is_open()
+  bool file_is_writable()
+    handle how to write, focus on vi
+  bool write_is_successful()
+  void write_code()
+    handle writing/saving/etc.
 go back to polling/idle state</code>
