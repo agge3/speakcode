@@ -12,7 +12,7 @@ Contribution to society should be a driving motivator in all intent of an increa
 ## Pseduocode
 <code>branch: do we want to gather input data or not?
     n? go back into a polling state, waiting for input
-      implement polling/idle state
+        implement polling/idle state
     y? look for flag, flag is confirmed, move onto input handling</code>
     
 <code>input handling: syscall to grab microphone data
