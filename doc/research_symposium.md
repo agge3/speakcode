@@ -14,27 +14,27 @@ Contribution to society should be a driving motivator in all intent of an increa
     n? go back into a polling state, waiting for input
         implement polling/idle state
     y? look for flag, flag is confirmed, move onto input handling</code>
-    
+
 <code>input handling: syscall to grab microphone data
   store microphone data in tmp, assign unique_ptr (to avoid copying)
   send microphone data to external API
   recieve transcription, store and be able to find
   unique_ptr to locate transcription/use without copying
   recieved in JSON? parse JSON to string</code>
-  
+
 <code>branch: what is the string? is it a command we know?
   n? error-handling, go back to idle state, request again, etc.
   y? ...
     branch: is it a shell command or not?
       shell? jump to shell handling
       else? jump to code handling</code>
-      
+
 <code>shell handling: *assumption:* we already know it's a valid shell command (checked already to be in this branch)
   send to sys to exec command
     branch: did sys confirm or reject command? bool is_confirmed()
       confirm? move on, go back to polling/idle state
       reject? error handling, go back to polling/idle state</code>
-      
+
 <code>code:
   bool file_is_open()
   bool file_is_writable()
