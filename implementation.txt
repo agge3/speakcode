@@ -1,0 +1,20 @@
+while (app is open) {
+	while (push to talk is pressed) {
+		syscall for microphone access and record
+		bool has_recorded = true;
+	}
+	if (has_recorded) {
+		send recording to text-to-speech server
+		recieve recording as text
+		delete recording
+		bool text_recieved = true;
+		has_recorded = false;
+	}
+	if (text_recieved) {
+		parse text data and map to keypress
+		keypress
+		delete text
+		text_recieved = false
+	}
+}
+   
